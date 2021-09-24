@@ -36,6 +36,7 @@ public void setFrames(BufferedImage[] image){
 	}
 
 	public BufferedImage getImage() {
+		
 		return frames[currentFrame];
 	}
 }
