@@ -59,7 +59,6 @@ public class Player {
         gravity = 0.64;
    
         try{
-        	
         	idleSprites = new BufferedImage[1];
         	jumpingSprites = new BufferedImage[1];
         	fallingSprites    = new BufferedImage[1];
