@@ -115,10 +115,10 @@ public class TileMap {
 	public void setY(int yy) {
 		y = yy;
 		if (y < miny) {
-			y = miny;
+		    y = miny;
 		}
 		if (y > maxy) {
-			y = maxy;
+		    y = maxy;
 		}
 	}
 
