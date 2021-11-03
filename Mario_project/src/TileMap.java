@@ -123,7 +123,6 @@ public class TileMap {
 	}
 
 	public void update() {
-
 	}
 
 	public void draw(Graphics2D g) {
