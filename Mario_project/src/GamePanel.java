@@ -73,7 +73,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 		tileMap = new TileMap("testMap.txt", 32);// "/textures/floors.png"
 													// "testmap.txt" 32
 													// "res/map.txt"﻿
-
 		tileMap.loadTiles("res/tileset.gif");
 
 		player = new Player(tileMap);
@@ -83,13 +82,11 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 	}
 
 	private void update() {
-
 		tileMap.update();
 		player.update();
 	}
 
 	private void render() {
-
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, WIDTH, HEIGHT);
 
@@ -108,7 +105,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 	}
 	
 	public void keyPressed(KeyEvent key) {
-
 		int code = key.getKeyCode();
 		if (code == KeyEvent.VK_LEFT) {
 			player.setLeft(true);
@@ -122,7 +118,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 	}
 
 	public void keyReleased(KeyEvent key) {
-
 		int code = key.getKeyCode();
 		if (code == KeyEvent.VK_LEFT) {
 			player.setLeft(false);
