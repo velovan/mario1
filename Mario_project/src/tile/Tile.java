@@ -9,16 +9,16 @@ public class Tile {
 	private boolean blocked;
 
 	public Tile(BufferedImage image, boolean blocked) {
-		this.image = image;
-		this.blocked = blocked;
+	    this.image = image;
+	    this.blocked = blocked;
 	}
 
 	public BufferedImage getImage() {
-		return image;
+           return image;
 	}
 
 	public boolean isBlocked() {
-		return blocked;
+	   return blocked;
 	}
 
 }
