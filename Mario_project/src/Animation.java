@@ -9,17 +9,17 @@ public class Animation {
 	private long startTime;
 	private long delay;
 
-	public Animation() {
+	public Animation(){
 	}
 
-public void setFrames(BufferedImage[] image){
+        public void setFrames(BufferedImage[] image){
 	frames = image;
 	if(currentFrame >= frames.length){
 		currentFrame = 0;
-	}
-}
+	     }
+        }
 
-	public void setDelay(long d) {
+	public void setDelay(long d){
 		delay = d;
 	}
     
@@ -35,8 +35,7 @@ public void setFrames(BufferedImage[] image){
 		}
 	}
 
-	public BufferedImage getImage() {
-		
+	public BufferedImage getImage(){	
 		return frames[currentFrame];
 	}
 }
