@@ -100,29 +100,29 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 		g2.dispose();
 	}
 
-	public void keyTyped(KeyEvent e) {
+	public void keyTyped(KeyEvent e){
 
 	}
 	
-	public void keyPressed(KeyEvent key) {
+	public void keyPressed(KeyEvent key){
 		int code = key.getKeyCode();
-		if (code == KeyEvent.VK_LEFT) {
+		if (code == KeyEvent.VK_LEFT){
 			player.setLeft(true);
 		}
-		if (code == KeyEvent.VK_RIGHT) {
+		if (code == KeyEvent.VK_RIGHT){
 			player.setRight(true);
 		}
-		if (code == KeyEvent.VK_SPACE) {
+		if (code == KeyEvent.VK_SPACE){
 			player.setJumping(true);
 		}
 	}
 
-	public void keyReleased(KeyEvent key) {
+	public void keyReleased(KeyEvent key){
 		int code = key.getKeyCode();
-		if (code == KeyEvent.VK_LEFT) {
+		if (code == KeyEvent.VK_LEFT){
 			player.setLeft(false);
 		}
-		if (code == KeyEvent.VK_RIGHT) {
+		if (code == KeyEvent.VK_RIGHT){
 			player.setRight(false);
 		}
 		// if(code == KeyEvent.VK_SPACE){
