@@ -124,7 +124,7 @@ public class Player {
     	if(dx > 0){
     		dx -= stopSpeed;
     		if(dx < 0){
-        		dx = 0;
+        	    dx = 0;
         	}
     	}
     	
@@ -147,7 +147,6 @@ public class Player {
     		dy = maxFallingSpeed;
     	}
     }
-    
     	// check collisions
     	int currCol = tileMap.getColTile((int) x);
     	int currRow = tileMap.getRowTile((int) y);
@@ -177,8 +176,7 @@ public class Player {
     		else{
     			tempy += dy;
     		 }
-         }
-    	
+         }	
     	calculateCorners(tox, y);
     	if(dx < 0){
     		if(topLeft || bottomLeft){
@@ -235,8 +233,7 @@ public class Player {
     		facingLeft = true;
     	}if(dx > 0){
     		facingLeft = false;
-    	}
-    	
+    	}	
     }
     
     public void draw(Graphics2D g){
