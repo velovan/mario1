@@ -13,7 +13,7 @@ import javax.imageio.ImageIO;
 
 import tile.Tile;
 
-public class TileMap {
+public class TileMap{
 
 	private int x;
 	private int y;
@@ -31,7 +31,7 @@ public class TileMap {
 	private int maxx = 0;
 	private int maxy = 0;
 
-	public TileMap(String s, int tileSize) {
+	public TileMap(String s, int tileSize){
 		this.tileSize = tileSize;
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(s));
@@ -48,12 +48,12 @@ public class TileMap {
 					map[row][col] = Integer.parseInt(top[col]);
 				}
 			}
-		} catch (Exception e) {
+		} catch (Exception e){
 			// e.printStackTrace();
 		}
 	}
 
-	public void loadTiles(String s) {
+	public void loadTiles(String s){
 		try {
 			tileset = ImageIO.read(new File(s));
 			int numTiles = (tileset.getWidth() + 1) / (tileSize + 1);
@@ -65,69 +65,69 @@ public class TileMap {
 				subImage = tileset.getSubimage(col + tileSize * col, tileSize + 1, tileSize, tileSize);
 				tiles[1][col] = new Tile(subImage, true);
 			}
-		} catch (IOException e) {
+		} catch (IOException e){
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	public int getX() {
+	public int getX(){
 		return x;
 	}
 
-	public int getY() {
+	public int getY(){
 		return y;
 	}
 
-	public int getColTile(int x) {
+	public int getColTile(int x){
 		return x / tileSize;
 	}
 
-	public int getRowTile(int y) {
+	public int getRowTile(int y){
 		return y / tileSize;
 	}
 
-	public int getTile(int row, int col) {
+	public int getTile(int row, int col){
 		return map[row][col];
 	}
 
-	public int getTileSize() {
+	public int getTileSize(){
 		return tileSize;
 	}
 
-	public boolean isBlocked(int row, int col) {
+	public boolean isBlocked(int row, int col){
 		int rc = map[row][col];
 		int r = rc / tiles[0].length;
 		int c = rc % tiles[0].length;
 		return tiles[r][c].isBlocked();
 	}
 
-	public void setX(int xx) {
+	public void setX(int xx){
 		x = xx;
-		if (x < minx) {
+		if (x < minx){
 			x = minx;
 		}
-		if (x > maxx) {
+		if (x > maxx){
 			x = maxx;
 		}
 	}
 
-	public void setY(int yy) {
+	public void setY(int yy){
 		y = yy;
-		if (y < miny) {
+		if (y < miny){
 		    y = miny;
 		}
-		if (y > maxy) {
+		if (y > maxy){
 		    y = maxy;
 		}
 	}
 
-	public void update() {
+	public void update(){
 	}
 
-	public void draw(Graphics2D g) {
-		for (int row = 0; row < mapHeight; row++) {
-			for (int col = 0; col < mapWidth; col++) {
+	public void draw(Graphics2D g){
+		for (int row = 0; row < mapHeight; row++){
+			for (int col = 0; col < mapWidth; col++){
 				int rc = map[row][col];
 				int r = rc / tiles[0].length;
 				int c = rc % tiles[0].length;
