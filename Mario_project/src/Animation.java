@@ -1,7 +1,7 @@
 import java.awt.Frame;
 import java.awt.image.BufferedImage;
 
-public class Animation {
+public class Animation{
 
 	private BufferedImage[] frames;
 	private int currentFrame;
