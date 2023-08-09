@@ -12,7 +12,7 @@ public class Animation{
 	public Animation(){
 	}
 
-        public void setFrames(BufferedImage[] image){
+        public void setFrames(BufferedImage[] image) {
 	frames = image;
 	if(currentFrame >= frames.length){
 		currentFrame = 0;
