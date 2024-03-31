@@ -13,7 +13,7 @@ import javax.imageio.ImageIO;
 
 import tile.Tile;
 
-public class TileMap{
+public class TileMap {
 
 	private int x;
 	private int y;
