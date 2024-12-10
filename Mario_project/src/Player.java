@@ -9,7 +9,7 @@ import java.io.FilterWriter;
 
 import javax.imageio.ImageIO;
 
-public class Player{
+public class Player {
 	
 	private double x;
 	private double y;
