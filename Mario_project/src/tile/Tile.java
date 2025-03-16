@@ -3,7 +3,7 @@ package tile;
 
 import java.awt.image.BufferedImage;
 
-public class Tile {
+public class Tile{
 	
 	private BufferedImage image;
 	private boolean blocked;
